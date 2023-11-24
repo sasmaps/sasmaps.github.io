@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAS Maps - Minecraft Parkour Map Makers</title>
+    <style>
+        body {
+            font-family: Arial, bold;
+            margin: 25px;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #26aa2d;
+            color: white;
+            font-size: x-large;
+        }
+        section {
+            margin: 30px 0;
+            text-align: center;
+            font-size: 134%;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-position-x: center ;
+            background-color: #26aa2d;
+            color: white;
+        }
+    </style>
+    <br>
+</head>
+<body>
+
+    <header>
+        <h1>SAS Maps - Minecraft Parkour Map Makers</h1>
+    </header>
+
+    <section>
+        <h1>Welcome to SAS Maps!</h1>
+        <p>Explore the exciting world of Minecraft Parkour Maps created by SAS Maps.</p>
+        <!-- Add more content or map listings here -->
+    </section>
+
+    <section>
+        <h1>Why don't you try out some of our maps?</h1>
+        <!-- Add featured maps with descriptions and images -->
+        <div>
+    </section>
+    <title>Image Slider</title>
+    <style>
+        .slider-container {
+            position: relative;
+            max-width: 1250px; /* Set to the width of your images */
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slider-content {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            background-color: aliceblue;
+            padding: 0.25%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slider-container">
+        <div class="slider-content">
+            <div class="slide"><img src="https://i.imgur.com/QtVdSqi.png" alt="Image 1"></div>
+            <div class="slide"><img src="https://i.imgur.com/lDbtgL4.png" alt="Image 2"></div>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            if (index < 0) {
+                currentIndex = totalSlides - 1;
+            } else if (index >= totalSlides) {
+                currentIndex = 0;
+            } else {
+                currentIndex = index;
+            }
+
+            const translateValue = -currentIndex * 100 + '%';
+            document.querySelector('.slider-content').style.transform = 'translateX(' + translateValue + ')';
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+
+        // Change slide every 3 seconds (adjust the interval as needed)
+        setInterval(nextSlide, 7000);
+    </script><br><br><br><br><br><br>
+    <footer>
+        <p> SAS Maps &copy; 2023 | All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
