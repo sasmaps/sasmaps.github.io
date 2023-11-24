@@ -6,27 +6,93 @@
     <title>SAS Maps - Minecraft Parkour Map Makers</title>
     <style>
         body {
-            font-family: Arial, bold;
-            margin: 25px;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; /* Light gray background */
+            color: #333;
+            line-height: 1.6;
         }
+
         header {
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 20px;
-            background-color: #26aa2d;
+            background-color: #26aa2d; /* Lime-green header */
             color: white;
-            font-size: x-large;
         }
+
+        .header-buttons {
+            display: flex;
+        }
+
+        .header-button {
+            margin-left: 10px;
+            padding: 10px;
+            background-color: #26aa2d; /* Apple blue */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .slider-container {
+            position: relative;
+            max-width: 800px; /* Set to the width of your images */
+            margin: auto;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .slider-content {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
         section {
-            margin: 30px 0;
-            text-align: center;
-            font-size: 134%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
         }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
         footer {
             text-align: center;
-            padding: 10px;
-            background-position-x: center ;
-            background-color: #26aa2d;
+            padding: 20px;
+            background-color: #26aa2d; /* Lime-green footer */
             color: white;
+            margin-top: 20px;
+        }
+
+        /* Apple-style button */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #26aa2d; /* Apple blue */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #19791e; /* Darker blue on hover */
         }
     </style>
     <br>
@@ -35,11 +101,24 @@
 
     <header>
         <h1>SAS Maps - Minecraft Parkour Map Makers</h1>
+        <div class="header-buttons">
+            <a href="#" class="header-button">Maps</a>
+            <a href="#" class="header-button">About Us</a>
+            <a href="#" class="header-button">Discord</a>
+        </div>
     </header>
 
+    <div class="slider-container">
+        <div class="slider-content">
+            <div class="slide"><img src="image1.jpg" alt="Map 1"></div>
+            <div class="slide"><img src="image2.jpg" alt="Map 2"></div>
+            <!-- Add more slides as needed -->
+        </div>
+    </div>
     <section>
         <h1>Welcome to SAS Maps!</h1>
         <p>Explore the exciting world of Minecraft Parkour Maps created by SAS Maps.</p>
+        <a href="#" class="button">Learn More</a>
         <!-- Add more content or map listings here -->
     </section>
 
@@ -112,12 +191,7 @@
 
         // Change slide every 3 seconds (adjust the interval as needed)
         setInterval(nextSlide, 7000);
-    </script>
-    <br><br><br>
-    <section>
-        <h1>Coming Soon!</h1>
-    </section>
-    <br><br><br>
+    </script><br><br><br><br><br><br>
     <footer>
         <p> SAS Maps &copy; 2023 | All rights reserved.</p>
     </footer>
