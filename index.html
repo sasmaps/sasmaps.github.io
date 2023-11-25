@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="icon" href="favicon..png" type="image/x-icon"/>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAS Maps - Minecraft Parkour Map Makers</title>
+    <title>SAS Maps Official Site</title>
     <style>
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f8f8f8; /* Light gray background */
+            text-align: center;
             color: #333;
             line-height: 1.6;
         }
@@ -30,10 +32,10 @@
         .header-button {
             margin-left: 10px;
             padding: 10px;
-            background-color: #26aa2d; /* Apple blue */
+            background-color: #208b25; /* Apple blue */
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 10px;
         }
 
         .slider-container {
@@ -50,6 +52,7 @@
         }
 
         .slide {
+            position: relative;
             min-width: 100%;
             box-sizing: border-box;
         }
@@ -57,6 +60,35 @@
         .slide img {
             width: 100%;
             height: auto;
+            display: block;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 255, 42, 0.7); /* Semi-transparent Apple blue overlay */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .overlay:hover {
+            opacity: 1;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #26aa2d; /* Apple blue */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
         }
 
         section {
@@ -73,19 +105,28 @@
             margin-bottom: 20px;
         }
 
+        a {
+            color: #26aa2d; /* Apple blue */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
             background-color: #26aa2d; /* Lime-green footer */
             color: white;
-            margin-top: 20px;
+            margin-top: 50px;
         }
 
         /* Apple-style button */
         .button {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #26aa2d; /* Apple blue */
+            background-color: rgba(38, 165, 59, 0.7); /* Apple blue */
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -94,8 +135,13 @@
         .button:hover {
             background-color: #19791e; /* Darker blue on hover */
         }
+        .buttontext{
+            color: black;
+            -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+            -webkit-text-outline-width: 1px;
+            -webkit-text-outline-color: black;
+        }
     </style>
-    <br>
 </head>
 <body>
 
@@ -104,91 +150,69 @@
         <div class="header-buttons">
             <a href="#" class="header-button">Maps</a>
             <a href="#" class="header-button">About Us</a>
-            <a href="https://discord.gg/SC5mw3VKnr" target=”_blank” class="header-button">Discord</a>
+            <a href="#" class="header-button">Discord</a>
         </div>
     </header>
-        </div>
-    </div>
+
     <section>
-        <h1>Welcome to SAS Maps!</h1>
-        <p>Explore the exciting world of Minecraft Parkour Maps created by SAS Maps.</p>
-        <a href="#" class="button">Learn More</a>
+        <h2>Welcome to SAS Maps!</h2>
+        <p>Explore the exciting world of parkour maps created by SAS Maps for Minecraft.</p>
         <!-- Add more content or map listings here -->
+        <a href="#" class="header-button">Learn More</a>
     </section>
 
     <section>
-        <h1>Why don't you try out some of our maps?</h1>
+        <h2>Featured Maps</h2>
         <!-- Add featured maps with descriptions and images -->
-        <div>
-    </section>
-    <title>Image Slider</title>
-    <style>
-        .slider-container {
-            position: relative;
-            max-width: 1250px; /* Set to the width of your images */
-            margin: auto;
-            overflow: hidden;
-        }
-
-        .slider-content {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .slide {
-            min-width: 100%;
-            box-sizing: border-box;
-            background-color: aliceblue;
-            padding: 0.25%;
-        }
-
-        .slide img {
-            width: 100%;
-            height: auto;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="slider-container">
-        <div class="slider-content">
-            <div class="slide"><img src="https://i.imgur.com/xVIqVnB.jpg" alt="Image 1"></div>
-            <div class="slide"><img src="https://i.imgur.com/lDbtgL4.png" alt="Image 2"></div>
+        <div class="slider-container">
+            <div class="slider-content">
+                <div class="slide">
+                    <img src="https://i.imgur.com/xVIqVnB.jpg" alt="Map 1">
+                    <div class="overlay">
+                        <h1 class="buttontext">Parkour Cube</h1> 
+                        <a href="#" class="button">Explore</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://i.imgur.com/lDbtgL4.png" alt="Map 2">
+                    <div class="overlay">
+                        <h1 class="buttontext">Parkour Snake</h1>
+                        <a href="#" class="button">Explore</a>
+                    </div>
+                </div>
+                <!-- Add more slides as needed -->
+            </div>
         </div>
-    </div>
-
-    <script>
-        let currentIndex = 0;
-        const slides = document.querySelectorAll('.slide');
-        const totalSlides = slides.length;
-
-        function showSlide(index) {
-            if (index < 0) {
-                currentIndex = totalSlides - 1;
-            } else if (index >= totalSlides) {
-                currentIndex = 0;
-            } else {
-                currentIndex = index;
+        <script>
+            let currentIndex = 0;
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+    
+            function showSlide(index) {
+                if (index < 0) {
+                    currentIndex = totalSlides - 1;
+                } else if (index >= totalSlides) {
+                    currentIndex = 0;
+                } else {
+                    currentIndex = index;
+                }
+    
+                const translateValue = -currentIndex * 100 + '%';
+                document.querySelector('.slider-content').style.transform = 'translateX(' + translateValue + ')';
             }
-
-            const translateValue = -currentIndex * 100 + '%';
-            document.querySelector('.slider-content').style.transform = 'translateX(' + translateValue + ')';
-        }
-
-        function nextSlide() {
-            showSlide(currentIndex + 1);
-        }
-
-        function prevSlide() {
-            showSlide(currentIndex - 1);
-        }
-
-        // Change slide every 3 seconds (adjust the interval as needed)
-        setInterval(nextSlide, 7000);
-    </script><br><br><br><br><br><br>
-    <footer>
-        <p> SAS Maps &copy; 2023 | All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+    
+            function nextSlide() {
+                showSlide(currentIndex + 1);
+            }
+    
+            function prevSlide() {
+                showSlide(currentIndex - 1);
+            }
+    
+            // Change slide every 3 seconds (adjust the interval as needed)
+            setInterval(nextSlide, 7000);
+        </script><br><br><br><br><br><br>
+        <footer>
+            <p> SAS Maps &copy; 2023 | All rights reserved.</p>
+        </footer>
+        <!-- Add more featured maps as needed -->
