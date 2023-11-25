@@ -13,30 +13,26 @@
             font-family: 'Kanit', sans-serif;;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8; /* Light gray background */
+            background-color: #f8f8f8;
             text-align: center;
             color: #333;
             line-height: 1.6;
         }
-
         .logo {
             margin-right: auto;
             height: 80px;
         }
-
         header {
             align-items: center;
             display: flex;
             padding: 20px;
-            background-color: #26aa2d; /* Lime-green header */
+            background-color: #26aa2d;
             color: white;
             
         }
-
         .header-buttons {
             display: flex;
         }
-
         .header-button {
             align-items: end;
             margin-left: 10px;
@@ -46,7 +42,6 @@
             text-decoration: none;
             border-radius: 10px;
         }
-
         .slider-container {
             position: relative;
             max-width: 800px;
@@ -54,24 +49,20 @@
             overflow: hidden;
             margin-top: 20px;
         }
-
         .slider-content {
             display: flex;
             transition: transform 0.5s ease-in-out;
         }
-
         .slide {
             position: relative;
             min-width: 100%;
             box-sizing: border-box;
         }
-
         .slide img {
             width: 100%;
             height: auto;
             display: block;
         }
-
         .overlay {
             position: absolute;
             top: 0;
@@ -86,68 +77,57 @@
             opacity: 0;
             transition: opacity 0.3s ease-in-out;
         }
-
         .overlay:hover {
             opacity: 1;
         }
-
         .button {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #26aa2d; /* Apple blue */
+            background-color: #26aa2d;
             color: white;
             text-decoration: none;
             border-radius: 5px;
         }
-
         section {
             max-width: 800px;
             margin: auto;
             padding: 20px;
         }
-
         h2 {
             color: #333;
         }
-
         p {
             margin-bottom: 20px;
         }
-
         a {
-            color: #26aa2d; /* Apple blue */
+            color: #26aa2d; 
             text-decoration: none;
         }
-
         a:hover {
             text-decoration: underline;
         }
-
         footer {
             text-align: center;
             padding: 10px;
-            background-color: #26aa2d; /* Lime-green footer */
+            background-color: #26aa2d; 
             color: white;
             margin-top: 10px;
             font-family: Arial, Helvetica, sans-serif;
         }
-
-        /* Apple-style button */
         .button {
             display: inline-block;
             padding: 10px 20px;
-            background-color: rgba(38, 165, 59, 0.7); /* Apple blue */
+            background-color: rgba(38, 165, 59, 0.7); 
             color: white;
             text-decoration: none;
             border-radius: 5px;
         }
-
         .button:hover {
-            background-color: #19791e; /* Darker blue on hover */
+            background-color: #19791e; 
         }
         .buttontext{
             color: black;
-            -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+            -webkit-text-fill-color: white; 
             -webkit-text-outline-width: 1px;
             -webkit-text-outline-color: black;
         }
@@ -162,17 +142,13 @@
             <a href="https://discord.gg/Rs5e2t52Yq" class="header-button" target=”_blank”>Discord</a>
         </div>
     </header>
-
     <section>
         <h2>Welcome to SAS Maps!</h2>
         <p>Explore the exciting world of parkour maps created by SAS Maps for Minecraft.</p>
-        <!-- Add more content or map listings here -->
         <a href="#" class="header-button">Learn More</a>
     </section>
-
     <section>
         <h2>Featured Maps</h2>
-        <!-- Add featured maps with descriptions and images -->
         <div class="slider-container">
             <div class="slider-content">
                 <div class="slide">
@@ -189,14 +165,12 @@
                         <a href="#" class="button">Explore</a>
                     </div>
                 </div>
-                <!-- Add more slides as needed -->
             </div>
         </div>
         <script>
             let currentIndex = 0;
             const slides = document.querySelectorAll('.slide');
             const totalSlides = slides.length;
-    
             function showSlide(index) {
                 if (index < 0) {
                     currentIndex = totalSlides - 1;
@@ -205,23 +179,17 @@
                 } else {
                     currentIndex = index;
                 }
-    
                 const translateValue = -currentIndex * 100 + '%';
                 document.querySelector('.slider-content').style.transform = 'translateX(' + translateValue + ')';
             }
-    
             function nextSlide() {
                 showSlide(currentIndex + 1);
             }
-    
             function prevSlide() {
                 showSlide(currentIndex - 1);
             }
-    
-            // Change slide every 3 seconds (adjust the interval as needed)
             setInterval(nextSlide, 7000);
         </script><br><br><br><br><br><br>
         <footer>
             <p> SAS Maps &copy; 2023 | All rights reserved.</p>
         </footer>
-        <!-- Add more featured maps as needed -->
