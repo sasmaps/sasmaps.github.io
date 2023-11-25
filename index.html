@@ -16,13 +16,20 @@
             line-height: 1.6;
         }
 
-        header {
-            display: flex;
-            justify-content: space-between;
+        .logo {
             align-items: center;
+            margin-left: 885px;
+            margin-right: 600px; 
+            height: 100px;
+        }
+
+        header {
+            align-items: center;
+            display: flex;
             padding: 20px;
             background-color: #26aa2d; /* Lime-green header */
             color: white;
+            
         }
 
         .header-buttons {
@@ -30,9 +37,10 @@
         }
 
         .header-button {
+            align-items: end;
             margin-left: 10px;
             padding: 10px;
-            background-color: #208b25; /* Apple blue */
+            background-color: #208b25;
             color: white;
             text-decoration: none;
             border-radius: 10px;
@@ -40,7 +48,7 @@
 
         .slider-container {
             position: relative;
-            max-width: 800px; /* Set to the width of your images */
+            max-width: 800px;
             margin: auto;
             overflow: hidden;
             margin-top: 20px;
@@ -69,7 +77,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 255, 42, 0.7); /* Semi-transparent Apple blue overlay */
+            background: rgba(0, 255, 42, 0.7);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -116,10 +124,10 @@
 
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 10px;
             background-color: #26aa2d; /* Lime-green footer */
             color: white;
-            margin-top: 50px;
+            margin-top: 10px;
         }
 
         /* Apple-style button */
@@ -144,13 +152,12 @@
     </style>
 </head>
 <body>
-
     <header>
-        <h1>SAS Maps - Minecraft Parkour Map Makers</h1>
+        <img src="favicon..png" alt="SAS Maps Logo" style="height: 100px;" class="logo">
         <div class="header-buttons">
             <a href="#" class="header-button">Maps</a>
             <a href="#" class="header-button">About Us</a>
-            <a href="#" class="header-button">Discord</a>
+            <a href="https://discord.gg/Rs5e2t52Yq" class="header-button" target=”_blank”>Discord</a>
         </div>
     </header>
 
