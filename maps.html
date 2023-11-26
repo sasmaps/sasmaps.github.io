@@ -138,59 +138,33 @@
     <header>
         <img src="favicon..png" alt="SAS Maps Logo" style="height: 80px;" class="logo">
         <div class="header-buttons">
-            <a href="maps.html" class="header-button">Maps</a>
+            <a href="index.html" class="header-button">Home</a>
             <a href="aboutus.html" class="header-button">About Us</a>
             <a href="https://discord.gg/Rs5e2t52Yq" class="header-button" target=”_blank”>Discord</a>
         </div>
     </header>
     <section>
-        <h2>Welcome to SAS Maps!</h2>
-        <p>Explore the exciting world of parkour maps created by SAS Maps for Minecraft.</p>
-        <a href="aboutus.html" class="header-button">Learn More</a>
-    </section>
-    <section>
-        <h2>Featured Maps</h2>
-        <div class="slider-container">
+        <h2>Our Maps</h2>
             <div class="slider-content">
                 <div class="slide">
                     <img style="border-radius: 15px;" src="https://i.imgur.com/6DAoy3F.png" alt="Map 1">
                     <div class="overlay">
                         <a href="#" class="button">Explore</a>
                     </div>
-                </div>
+                <br><br><br>
                 <div class="slide">
-                    <img style="border-radius: 15px;" src="https://i.imgur.com/XDrw72P.png" alt="Map 2">
+                    <img style="border-radius: 15px;" src="https://i.imgur.com/XDrw72P.png" alt="Map 2" style="margin-left: 20px;">
                     <div class="overlay">
                         <a href="#" class="button">Explore</a>
                     </div>
                 </div>
             </div>
         </div>
-        <script>
-            let currentIndex = 0;
-            const slides = document.querySelectorAll('.slide');
-            const totalSlides = slides.length;
-            function showSlide(index) {
-                if (index < 0) {
-                    currentIndex = totalSlides - 1;
-                } else if (index >= totalSlides) {
-                    currentIndex = 0;
-                } else {
-                    currentIndex = index;
-                }
-                const translateValue = -currentIndex * 100 + '%';
-                document.querySelector('.slider-content').style.transform = 'translateX(' + translateValue + ')';
-            }
-            function nextSlide() {
-                showSlide(currentIndex + 1);
-            }
-            function prevSlide() {
-                showSlide(currentIndex - 1);
-            }
-            setInterval(nextSlide, 7000);
-        </script>
-    </section>
-    <footer>
-        <p> SAS Maps &copy; 2023 | All rights reserved.</p>
-    </footer>
-        
+    </div>
+</section>
+</body>
+</html>
+<br><br>
+<footer>
+    <p> SAS Maps &copy; 2023 | All rights reserved.</p>
+</footer>
