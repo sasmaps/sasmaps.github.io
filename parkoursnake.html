@@ -7,51 +7,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Maps</title>
+    <title>SAS Maps Official Site</title>
     <style>
         body {
             font-family: 'Kanit', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f8f8f8;
+            text-align: center;
             color: #333;
             line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
         }
-
         .logo {
             margin-right: auto;
             height: 80px;
         }
-
         header {
             align-items: center;
             display: flex;
             padding: 20px;
             background-color: #26aa2d;
-            color: white;  
+            color: white;
+            
         }
-
         .header-buttons {
             display: flex;
         }
-
         .header-button {
             align-items: end;
-            margin-left: 10px;
+            margin-left: 3px;
             padding: 10px;
             background-color: #208b25;
             color: white;
             text-decoration: none;
             border-radius: 10px;
+        
         }
-
         .header-button:hover {
-            background-color: #19791e; 
+            align-items: end;
+            margin-left: 3px;
+            padding: 10px;
+            background-color: #19791e;
+            color: white;
+        
         }
 
+        .header-buttonn {
+            align-items: end;
+            margin-left: 3px;
+            padding: 10px;
+            background-color: #34a1a5;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+        
+        }
+
+        .header-buttonn:hover {
+            align-items: end;
+            margin-left: 3px;
+            padding: 10px;
+            background-color: #2a8386;
+            color: white;
+        
+        }
         .slider-container {
             position: relative;
             max-width: 800px;
@@ -126,8 +145,8 @@
         }
         .button {
             display: inline-block;
-            padding: 10px 20px;
-            background-color: rgba(38, 165, 59, 0.7); 
+            padding: 1px x;
+            background-color: rgba(38, 165, 59, 0); 
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -145,38 +164,71 @@
 </head>
 <body>
     <header>
-        <img src="favicon..png" alt="SAS Maps Logo" class="logo" >
+        <img src="favicon..png" alt="SAS Maps Logo" style="height: 80px;" class="logo">
         <div class="header-buttons">
             <a href="index.html" class="header-button">Home</a>
+            <a href="maps.html" class="header-button">Maps</a>
             <a href="aboutus.html" class="header-button">About Us</a>
             <a href="https://discord.gg/Rs5e2t52Yq" class="header-button" target=”_blank”>Discord</a>
         </div>
     </header>
     <section>
-        <h2>Our Maps</h2>
+        <h1>Parkour Snake</h1>
+    </section>
+    <section>
+        <div class="slider-container">
             <div class="slider-content">
                 <div class="slide">
-                    <img style="border-radius: 15px;" src="https://i.imgur.com/6DAoy3F.png" alt="Map 1">
-                    <div class="overlay">
-                        <a href="parkourcube.html" class="button">Explore</a>
-                    </div>
+                    <img style="border-radius: 15px;" src="https://www.minecraftmaps.com/images/jdownloads/screenshots/New_project.png" alt="Map 1">
                 </div>
-            </div>
-                <br><br><br>
-                <br><br><br>
                 <div class="slide">
-                    <img style="border-radius: 15px;" src="https://i.imgur.com/XDrw72P.png" alt="Map 2" style="margin-left: 20px;">
-                    <div class="overlay">
-                        <a href="parkoursnake.html" class="button">Explore</a>
-                    </div>
+                    <img style="border-radius: 15px;" src="https://www.minecraftmaps.com/images/jdownloads/screenshots/2023-05-30_20.00.54.png" alt="Map 2">
+                </div>
+                <div class="slide">
+                    <img style="border-radius: 15px;" src="https://www.minecraftmaps.com/images/jdownloads/screenshots/2023-05-30_20.01.10.png" alt="Map 3">
                 </div>
             </div>
         </div>
-</section>
-</body>
-</html>
-<br><br>
-
-<footer>
-    <p> SAS Maps &copy; 2023 | All rights reserved.</p>
-</footer>
+        <br><br>
+        <p>Jump into Quartz Snake full of PARKOUR! Lots of unique map levels available in just one snake. Can you reach Netherite Top? Let's find out! More than 20 parkour levels. Map made and designed by SAS Maps!</p>
+        <p>Minecraft version - 1.20.x</p>
+        <div class="header-buttons">
+            <a style="margin: auto;" href="https://www.minecraftmaps.com/parkour-maps/parkour-snake/download-map" class="header-button">Get the Map here!</a>
+            </div>
+            <br>
+            <a class="header-buttonn" href="https://www.speedrun.com/sas_maps/leaderboards?h=Parkour_Snake-Any&x=l_owoz3yyd-824qzwek" target=”_blank”>Submit
+                your speedrun!</a>
+            <br><br><br>
+            <h1>Map Trailer</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/NER3_UcnVic?si=jg_LVf7gr5NV2yOj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <script>
+            let currentIndex = 0;
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+            function showSlide(index) {
+                if (index < 0) {
+                    currentIndex = totalSlides - 1;
+                } else if (index >= totalSlides) {
+                    currentIndex = 0;
+                } else {
+                    currentIndex = index;
+                }
+                const translateValue = -currentIndex * 100 + '%';
+                document.querySelector('.slider-content').style.transform = 'translateX(' + translateValue + ')';
+            }
+            function nextSlide() {
+                showSlide(currentIndex + 1);
+            }
+            function prevSlide() {
+                showSlide(currentIndex - 1);
+            }
+            setInterval(nextSlide, 7000);
+        </script>
+    </section>
+    </body>
+    </html>
+    <br><br><br>
+    <footer>
+        <p> SAS Maps &copy; 2023 | All rights reserved.</p>
+    </footer>
+        
